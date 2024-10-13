@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LG U+ 법인특가폰 전용몰</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>LG U+ 법인특가폰 전용몰</h1>
+        <p>법인 고객을 위한 특별한 가격과 서비스!</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#home">홈</a></li>
+            <li><a href="#products">제품</a></li>
+            <li><a href="#benefits">혜택</a></li>
+            <li><a href="#contact">상담신청</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section id="home">
+            <h2>LG U+와 함께하는 스마트한 비즈니스</h2>
+            <p>법인 고객을 위한 특별한 혜택과 함께 최신 스마트폰을 만나보세요.</p>
+        </section>
+        
+        <section id="products">
+            <h2>추천 법인폰</h2>
+            <div class="product-list">
+                <div class="product">
+                    <img src="/api/placeholder/200/200" alt="갤럭시 S21" onclick="openModal('galaxy-s21.jpg', '삼성 갤럭시 S21')">
+                    <h3>삼성 갤럭시 S21</h3>
+                    <p>화면: 6.2인치 AMOLED</p>
+                    <p>카메라: 1200만 화소 트리플</p>
+                    <p>배터리: 4000mAh</p>
+                    <p>특가: 800,000원</p>
+                    <button onclick="openModal('galaxy-s21.jpg', '삼성 갤럭시 S21')">자세히 보기</button>
+                </div>
+                <div class="product">
+                    <img src="/api/placeholder/200/200" alt="아이폰 12" onclick="openModal('iphone-12.jpg', '애플 아이폰 12')">
+                    <h3>애플 아이폰 12</h3>
+                    <p>화면: 6.1인치 Super Retina XDR</p>
+                    <p>카메라: 1200만 화소 듀얼</p>
+                    <p>배터리: 2815mAh</p>
+                    <p>특가: 950,000원</p>
+                    <button onclick="openModal('iphone-12.jpg', '애플 아이폰 12')">자세히 보기</button>
+                </div>
+                <div class="product">
+                    <img src="/api/placeholder/200/200" alt="LG 벨벳" onclick="openModal('lg-velvet.jpg', 'LG 벨벳')">
+                    <h3>LG 벨벳</h3>
+                    <p>화면: 6.8인치 P-OLED</p>
+                    <p>카메라: 4800만 화소 트리플</p>
+                    <p>배터리: 4300mAh</p>
+                    <p>특가: 600,000원</p>
+                    <button onclick="openModal('lg-velvet.jpg', 'LG 벨벳')">자세히 보기</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <img id="modalImage" src="" alt="" style="width:100%;">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 LG U+ 법인특가폰 전용몰. All rights reserved.</p>
+    </footer>
+
+    <script>
+        var modal = document.getElementById("imageModal");
+        var modalImg = document.getElementById("modalImage");
+        var modalTitle = document.getElementById("modalTitle");
+        var span = document.getElementsByClassName("close")[0];
+
+        function openModal(imageSrc, title) {
+            modal.style.display = "block";
+            modalImg.src = imageSrc;
+            modalTitle.innerHTML = title;
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
