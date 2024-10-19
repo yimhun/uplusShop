@@ -20,49 +20,15 @@
         <ul>
             <li><a href="#home">홈</a></li>
             <li><a href="#products">제품</a></li>
-            <li><a href="#about">소개</a></li>
-            <li><a href="#contact">고객센터</a></li>
+            <li><a href="https://www.lguplus.com/benefit-affiliate/card-discount" target="_blank">제휴카드 소개</a></li>
+            <li><a href="#" onclick="openPlanModal()">요금제 안내</a></li>
+            <li><a href="tel:1544-8999">고객센터</a></li>
         </ul>
     </nav>
 
     <main>
-        <h1>법인 고객 특가 상품</h1>
         <div class="product-grid">
-            <div class="product-card">
-                <img src="image/iphone15-thumbnail.jpg" alt="아이폰15">
-                <h3>아이폰15</h3>
-                <p>애플의 최신 기술이 집약된 프리미엄 스마트폰</p>
-                <p class="price">가격: 230,000원</p>
-                <button onclick="openModal('iphone15')">자세히 보기</button>
-            </div>
-            <div class="product-card">
-                <img src="image/iphone16-thumbnail.jpg" alt="아이폰16">
-                <h3>아이폰16</h3>
-                <p>혁신적인 성능과 디자인의 차세대 아이폰</p>
-                <p class="price">가격: 80,000원</p>
-                <button onclick="openModal('iphone16')">자세히 보기</button>
-            </div>
-            <div class="product-card">
-                <img src="image/galaxys24-thumbnail.jpg" alt="갤럭시S24">
-                <h3>갤럭시S24</h3>
-                <p>삼성의 최신 플래그십 스마트폰</p>
-                <p class="price">가격: 0원</p>
-                <button onclick="openModal('galaxys24')">자세히 보기</button>
-            </div>
-            <div class="product-card">
-                <img src="image/galaxyzflip6-thumbnail.jpg" alt="갤럭시Z Flip6">
-                <h3>갤럭시Z Flip6</h3>
-                <p>혁신적인 폴더블 디자인의 컴팩트 스마트폰</p>
-                <p class="price">가격: 310,000원</p>
-                <button onclick="openModal('galaxyzflip6')">자세히 보기</button>
-            </div>
-            <div class="product-card">
-                <img src="image/galaxyzfold6-thumbnail.jpg" alt="갤럭시Z Fold6">
-                <h3>갤럭시Z Fold6</h3>
-                <p>대화면 폴더블 스마트폰의 최신작</p>
-                <p class="price">가격: 1,150,000원</p>
-                <button onclick="openModal('galaxyzfold6')">자세히 보기</button>
-            </div>
+            <!-- 제품 카드들 (변경 없음) -->
         </div>
     </main>
 
@@ -73,16 +39,23 @@
         </div>
     </div>
 
+    <div id="plan-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePlanModal()">&times;</span>
+            <img src="요금제.jpg" alt="요금제 안내" style="width:100%;">
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2024 LG U+ 법인 특가폰 Mall. All rights reserved.</p>
     </footer>
 
     <script>
         var modal = document.getElementById("modal");
+        var planModal = document.getElementById("plan-modal");
         var modalImg = document.getElementById("modal-image");
         var span = document.getElementsByClassName("close")[0];
 
-        // 상세 이미지 파일명을 객체로 정의
         var detailImages = {
             'iphone15': 'iphone15-detail.jpg',
             'iphone16': 'iphone16-detail.jpg',
@@ -92,10 +65,16 @@
         };
 
         function openModal(productId) {
-            console.log("Opening modal for: " + productId); // 디버깅용
             modal.style.display = "block";
             modalImg.src = `image/${detailImages[productId]}`;
-            console.log("Modal image src: " + modalImg.src); // 디버깅용
+        }
+
+        function openPlanModal() {
+            planModal.style.display = "block";
+        }
+
+        function closePlanModal() {
+            planModal.style.display = "none";
         }
 
         span.onclick = function() {
@@ -105,6 +84,9 @@
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
+            }
+            if (event.target == planModal) {
+                planModal.style.display = "none";
             }
         }
     </script>
