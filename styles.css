@@ -105,18 +105,43 @@ main {
     margin: 10px 0;
 }
 
-.product-card button {
-    background-color: var(--primary-color);
-    color: #fff;
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.button-group button,
+.button-group .consult-button {
+    flex: 1;
+    padding: 10px;
     border: none;
-    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
 }
 
-.product-card button:hover {
+.button-group button {
+    background-color: var(--primary-color);
+    color: #fff;
+    margin-right: 5px;
+}
+
+.button-group .consult-button {
+    background-color: var(--accent-color);
+    color: #fff;
+    margin-left: 5px;
+}
+
+.button-group button:hover {
     background-color: #560c7e;
+}
+
+.button-group .consult-button:hover {
+    background-color: #e62e7f;
 }
 
 footer {
