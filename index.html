@@ -5,135 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LG U+ 법인 특가폰 Mall</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #700fa0;
-            --secondary-color: #f2f2f2;
-            --text-color: #333;
-            --accent-color: #FF388C;
-        }
-        body {
-            font-family: 'Noto Sans KR', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: var(--secondary-color);
-            color: var(--text-color);
-        }
-        header {
-            background-color: #000;
-            color: #fff;
-            padding: 40px 20px;
-            position: relative;
-            background-image: url('header-background.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-            text-align: center;
-        }
-        .header-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 0;
-        }
-        .header-text h1 {
-            font-size: 3rem;
-            margin: 0;
-            padding: 20px 0;
-        }
-        nav {
-            background-color: var(--primary-color);
-            padding: 0.5rem;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        main {
-            padding: 40px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
-        }
-        .product-card {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            padding: 20px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-        .product-card:hover {
-            transform: translateY(-5px);
-        }
-        .product-card img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-            margin-bottom: 15px;
-        }
-        .product-card h3 {
-            font-size: 1.2rem;
-            color: var(--primary-color);
-            margin-bottom: 10px;
-        }
-        .product-card p {
-            margin: 5px 0;
-        }
-        .product-card .price {
-            font-weight: bold;
-            color: var(--accent-color);
-            margin: 10px 0;
-        }
-        .product-card button {
-            background-color: var(--primary-color);
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .product-card button:hover {
-            background-color: #560c7e;
-        }
-        footer {
-            background-color: var(--primary-color);
-            color: #fff;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 40px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="header-overlay"></div>
         <div class="header-content">
             <div class="header-text">
                 <h1>LG U+ 법인 특가폰 Mall</h1>
@@ -154,45 +29,84 @@
         <h1>법인 고객 특가 상품</h1>
         <div class="product-grid">
             <div class="product-card">
-                <img src="/uplusShop/image/iphone15-thumbnail.jpg" alt="아이폰15">
+                <img src="image/iphone15-thumbnail.jpg" alt="아이폰15">
                 <h3>아이폰15</h3>
                 <p>애플의 최신 기술이 집약된 프리미엄 스마트폰</p>
                 <p class="price">가격: 230,000원</p>
-                <button>자세히 보기</button>
+                <button onclick="openModal('iphone15')">자세히 보기</button>
             </div>
             <div class="product-card">
-                <img src="/uplusShop/image/iphone16-thumbnail.jpg" alt="아이폰16">
+                <img src="image/iphone16-thumbnail.jpg" alt="아이폰16">
                 <h3>아이폰16</h3>
                 <p>혁신적인 성능과 디자인의 차세대 아이폰</p>
                 <p class="price">가격: 80,000원</p>
-                <button>자세히 보기</button>
+                <button onclick="openModal('iphone16')">자세히 보기</button>
             </div>
             <div class="product-card">
-                <img src="/uplusShop/image/galaxys24-thumbnail.jpg" alt="갤럭시S24">
+                <img src="image/galaxys24-thumbnail.jpg" alt="갤럭시S24">
                 <h3>갤럭시S24</h3>
                 <p>삼성의 최신 플래그십 스마트폰</p>
                 <p class="price">가격: 0원</p>
-                <button>자세히 보기</button>
+                <button onclick="openModal('galaxys24')">자세히 보기</button>
             </div>
             <div class="product-card">
-                <img src="/uplusShop/image/galaxyzflip6-thumbnail.jpg" alt="갤럭시Z Flip6">
+                <img src="image/galaxyzflip6-thumbnail.jpg" alt="갤럭시Z Flip6">
                 <h3>갤럭시Z Flip6</h3>
                 <p>혁신적인 폴더블 디자인의 컴팩트 스마트폰</p>
                 <p class="price">가격: 310,000원</p>
-                <button>자세히 보기</button>
+                <button onclick="openModal('galaxyzflip6')">자세히 보기</button>
             </div>
             <div class="product-card">
-                <img src="/uplusShop/image/galaxyzfold6-thumbnail.jpg" alt="갤럭시Z Fold6">
+                <img src="image/galaxyzfold6-thumbnail.jpg" alt="갤럭시Z Fold6">
                 <h3>갤럭시Z Fold6</h3>
                 <p>대화면 폴더블 스마트폰의 최신작</p>
                 <p class="price">가격: 1,150,000원</p>
-                <button>자세히 보기</button>
+                <button onclick="openModal('galaxyzfold6')">자세히 보기</button>
             </div>
         </div>
     </main>
 
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modal-image" src="" alt="상세 이미지">
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2024 LG U+ 법인 특가폰 Mall. All rights reserved.</p>
     </footer>
+
+    <script>
+        var modal = document.getElementById("modal");
+        var modalImg = document.getElementById("modal-image");
+        var span = document.getElementsByClassName("close")[0];
+
+        // 상세 이미지 파일명을 객체로 정의
+        var detailImages = {
+            'iphone15': 'iphone15-detail.jpg',
+            'iphone16': 'iphone16-detail.jpg',
+            'galaxys24': 'galaxys24-detail.jpg',
+            'galaxyzflip6': 'galaxyzflip6-detail.jpg',
+            'galaxyzfold6': 'galaxyzfold6-detail.jpg'
+        };
+
+        function openModal(productId) {
+            console.log("Opening modal for: " + productId); // 디버깅용
+            modal.style.display = "block";
+            modalImg.src = `image/${detailImages[productId]}`;
+            console.log("Modal image src: " + modalImg.src); // 디버깅용
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
