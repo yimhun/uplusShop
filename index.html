@@ -230,7 +230,66 @@
                         <a href="https://forms.gle/1GkMNer2tGjpyYQJ6" target="_blank" class="consult-button">상담 신청하기</a>
                     </div>
                 </div>
-                <!-- 다른 제품 카드들도 같은 형식으로 추가 -->
+                <div class="product-card">
+                    <img src="image/iphone16-thumbnail.jpg" alt="아이폰16">
+                    <h3 class="product-name">아이폰16</h3>
+                    <p>혁신적인 성능과 디자인의 차세대 아이폰</p>
+                    <div class="price-details">
+                        <p>출고가: 1,397,000원</p>
+                        <p>(-) 선택약정 할인: - 510,000원</p>
+                        <p>(-) 제휴카드 할인: - 360,000원</p>
+                        <p>(-) 법인특판 할인: - 300,000원</p>
+                    </div>
+                    <div class="button-group">
+                        <button onclick="openModal('iphone16')">자세히 보기</button>
+                        <a href="https://forms.gle/1GkMNer2tGjpyYQJ6" target="_blank" class="consult-button">상담 신청하기</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="image/galaxys24-thumbnail.jpg" alt="갤럭시S24">
+                    <h3 class="product-name">갤럭시S24</h3>
+                    <p>삼성의 최신 플래그십 스마트폰</p>
+                    <div class="price-details">
+                        <p>출고가: 1,155,000원</p>
+                        <p>(-) 선택약정 할인: - 510,000원</p>
+                        <p>(-) 제휴카드 할인: - 360,000원</p>
+                        <p>(-) 법인특판 할인: - 300,000원</p>
+                    </div>
+                    <div class="button-group">
+                        <button onclick="openModal('galaxys24')">자세히 보기</button>
+                        <a href="https://forms.gle/1GkMNer2tGjpyYQJ6" target="_blank" class="consult-button">상담 신청하기</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="image/galaxyzflip6-thumbnail.jpg" alt="갤럭시Z Flip6">
+                    <h3 class="product-name">갤럭시Z Flip6</h3>
+                    <p>혁신적인 폴더블 디자인의 컴팩트 스마트폰</p>
+                    <div class="price-details">
+                        <p>출고가: 1,485,000원</p>
+                        <p>(-) 선택약정 할인: - 510,000원</p>
+                        <p>(-) 제휴카드 할인: - 360,000원</p>
+                        <p>(-) 법인특판 할인: - 300,000원</p>
+                    </div>
+                    <div class="button-group">
+                        <button onclick="openModal('galaxyzflip6')">자세히 보기</button>
+                        <a href="https://forms.gle/1GkMNer2tGjpyYQJ6" target="_blank" class="consult-button">상담 신청하기</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="image/galaxyzfold6-thumbnail.jpg" alt="갤럭시Z Fold6">
+                    <h3 class="product-name">갤럭시Z Fold6</h3>
+                    <p>대화면 폴더블 스마트폰의 최신작</p>
+                    <div class="price-details">
+                        <p>출고가: 2,229,700원</p>
+                        <p>(-) 선택약정 할인: - 510,000원</p>
+                        <p>(-) 제휴카드 할인: - 360,000원</p>
+                        <p>(-) 법인특판 할인: - 300,000원</p>
+                    </div>
+                    <div class="button-group">
+                        <button onclick="openModal('galaxyzfold6')">자세히 보기</button>
+                        <a href="https://forms.gle/1GkMNer2tGjpyYQJ6" target="_blank" class="consult-button">상담 신청하기</a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -257,69 +316,4 @@
     </div>
 
     <footer>
-        <p>&copy; 2024 LG U+ 법인 특가폰 Mall. All rights reserved.</p>
-    </footer>
-
-    <script>
-        var modal = document.getElementById("modal");
-        var planModal = document.getElementById("plan-modal");
-        var affiliateModal = document.getElementById("affiliate-modal");
-        var modalImg = document.getElementById("modal-image");
-        var affiliateIframe = document.getElementById("affiliate-iframe");
-        var span = document.getElementsByClassName("close")[0];
-
-        var detailImages = {
-            'iphone15': 'image/iphone15-detail.jpg',
-            'iphone16': 'image/iphone16-detail.jpg',
-            'galaxys24': 'image/galaxys24-detail.jpg',
-            'galaxyzflip6': 'image/galaxyzflip6-detail.jpg',
-            'galaxyzfold6': 'image/galaxyzfold6-detail.jpg'
-        };
-
-        function openModal(productId) {
-            modal.style.display = "block";
-            modalImg.src = detailImages[productId];
-        }
-
-        function openPlanModal() {
-            planModal.style.display = "block";
-        }
-
-        function closePlanModal() {
-            planModal.style.display = "none";
-        }
-
-        function openAffiliateModal() {
-            affiliateModal.style.display = "block";
-            affiliateIframe.src = "https://www.lguplus.com/benefit-affiliate/card-discount";
-        }
-
-        function closeAffiliateModal() {
-            affiliateModal.style.display = "none";
-            affiliateIframe.src = "";
-        }
-
-        // 모든 close 버튼에 대한 이벤트 리스너 추가
-        var closeButtons = document.getElementsByClassName("close");
-        for (var i = 0; i < closeButtons.length; i++) {
-            closeButtons[i].onclick = function() {
-                modal.style.display = "none";
-                planModal.style.display = "none";
-                closeAffiliateModal();
-            }
-        }
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-            if (event.target == planModal) {
-                planModal.style.display = "none";
-            }
-            if (event.target == affiliateModal) {
-                closeAffiliateModal();
-            }
-        }
-    </script>
-</body>
-</html>
+        <p>&copy; 2024 LG U+ 법인 특가폰 Mall. All rights reserve
