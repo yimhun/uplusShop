@@ -5,55 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LG U+ 법인 특가폰 Mall</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        /* 기존 스타일 유지 */
-        /* 새로운 스타일 추가 */
-        .product-card {
-            padding: 20px;
-            text-align: left;
-        }
-        .product-name {
-            color: #9254de;
-            font-size: 1.5em;
-            margin-bottom: 5px;
-        }
-        .product-description {
-            color: #666;
-            margin-bottom: 15px;
-        }
-        .price-details {
-            margin-bottom: 15px;
-        }
-        .original-price {
-            font-weight: bold;
-            font-size: 1.2em;
-            margin-bottom: 10px;
-        }
-        .discount-item {
-            color: #ff3e96;
-            margin: 5px 0;
-        }
-        .button-group {
-            display: flex;
-            justify-content: space-between;
-        }
-        .detail-button, .consult-button {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-            flex-grow: 1;
-            margin: 0 5px;
-        }
-        .detail-button {
-            background-color: #9254de;
-        }
-        .consult-button {
-            background-color: #ff3e96;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -91,7 +43,6 @@
                     <a href="https://forms.gle/1GkMNer2tGjpyYQJ6" target="_blank" class="consult-button">상담 신청하기</a>
                 </div>
             </div>
-            <!-- 다른 제품들도 같은 형식으로 변경 -->
             <div class="product-card">
                 <img src="image/iphone16-thumbnail.jpg" alt="아이폰16">
                 <h3 class="product-name">아이폰16</h3>
@@ -107,7 +58,7 @@
                     <a href="https://forms.gle/1GkMNer2tGjpyYQJ6" target="_blank" class="consult-button">상담 신청하기</a>
                 </div>
             </div>
-            <!-- 나머지 제품들도 같은 방식으로 수정 -->
+            <!-- 추가 제품 카드들... -->
         </div>
     </main>
 
@@ -137,7 +88,6 @@
     </footer>
 
     <script>
-        // 기존 JavaScript 코드 유지
         var modal = document.getElementById("modal");
         var planModal = document.getElementById("plan-modal");
         var affiliateModal = document.getElementById("affiliate-modal");
