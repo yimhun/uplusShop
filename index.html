@@ -20,7 +20,7 @@
         <ul>
             <li><a href="#home">홈</a></li>
             <li><a href="#products">제품</a></li>
-            <li><a href="https://www.lguplus.com/benefit-affiliate/card-discount" target="_blank">제휴카드 소개</a></li>
+            <li><a href="#" onclick="openAffiliateModal(); return false;">제휴카드 소개</a></li>
             <li><a href="#" onclick="openPlanModal()">요금제 안내</a></li>
             <li><a href="tel:1544-8999">고객센터</a></li>
         </ul>
@@ -35,7 +35,7 @@
                 <p class="price">가격: 230,000원</p>
                 <div class="button-group">
                     <button onclick="openModal('iphone15')">자세히 보기</button>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWSekg2xKYipwqNbiiEJcnXP03Kug_bTc9mKUEltlBj9_AAw/viewform" target="_blank" class="consult-button">상담 신청하기</a>
+                    <a href="https://forms.gle/1GkMNer2tGjpyYQJ6" target="_blank" class="consult-button">상담 신청하기</a>
                 </div>
             </div>
             <div class="product-card">
@@ -45,7 +45,7 @@
                 <p class="price">가격: 80,000원</p>
                 <div class="button-group">
                     <button onclick="openModal('iphone16')">자세히 보기</button>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWSekg2xKYipwqNbiiEJcnXP03Kug_bTc9mKUEltlBj9_AAw/viewform" target="_blank" class="consult-button">상담 신청하기</a>
+                    <a href="https://forms.gle/1GkMNer2tGjpyYQJ6" target="_blank" class="consult-button">상담 신청하기</a>
                 </div>
             </div>
             <div class="product-card">
@@ -55,7 +55,7 @@
                 <p class="price">가격: 0원</p>
                 <div class="button-group">
                     <button onclick="openModal('galaxys24')">자세히 보기</button>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWSekg2xKYipwqNbiiEJcnXP03Kug_bTc9mKUEltlBj9_AAw/viewform" target="_blank" class="consult-button">상담 신청하기</a>
+                    <a href="https://forms.gle/1GkMNer2tGjpyYQJ6" target="_blank" class="consult-button">상담 신청하기</a>
                 </div>
             </div>
             <div class="product-card">
@@ -65,7 +65,7 @@
                 <p class="price">가격: 310,000원</p>
                 <div class="button-group">
                     <button onclick="openModal('galaxyzflip6')">자세히 보기</button>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWSekg2xKYipwqNbiiEJcnXP03Kug_bTc9mKUEltlBj9_AAw/viewform" target="_blank" class="consult-button">상담 신청하기</a>
+                    <a href="https://forms.gle/1GkMNer2tGjpyYQJ6" target="_blank" class="consult-button">상담 신청하기</a>
                 </div>
             </div>
             <div class="product-card">
@@ -75,7 +75,7 @@
                 <p class="price">가격: 1,150,000원</p>
                 <div class="button-group">
                     <button onclick="openModal('galaxyzfold6')">자세히 보기</button>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWSekg2xKYipwqNbiiEJcnXP03Kug_bTc9mKUEltlBj9_AAw/viewform" target="_blank" class="consult-button">상담 신청하기</a>
+                    <a href="https://forms.gle/1GkMNer2tGjpyYQJ6" target="_blank" class="consult-button">상담 신청하기</a>
                 </div>
             </div>
         </div>
@@ -95,6 +95,13 @@
         </div>
     </div>
 
+    <div id="affiliate-modal" class="modal">
+        <div class="modal-content" style="width: 90%; max-width: 1200px; height: 80vh;">
+            <span class="close" onclick="closeAffiliateModal()">&times;</span>
+            <iframe id="affiliate-iframe" style="width: 100%; height: 100%; border: none;" src=""></iframe>
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2024 LG U+ 법인 특가폰 Mall. All rights reserved.</p>
     </footer>
@@ -102,7 +109,9 @@
     <script>
         var modal = document.getElementById("modal");
         var planModal = document.getElementById("plan-modal");
+        var affiliateModal = document.getElementById("affiliate-modal");
         var modalImg = document.getElementById("modal-image");
+        var affiliateIframe = document.getElementById("affiliate-iframe");
         var span = document.getElementsByClassName("close")[0];
 
         var detailImages = {
@@ -128,6 +137,16 @@
             planModal.style.display = "none";
         }
 
+        function openAffiliateModal() {
+            affiliateModal.style.display = "block";
+            affiliateIframe.src = "https://www.lguplus.com/benefit-affiliate/card-discount";
+        }
+
+        function closeAffiliateModal() {
+            affiliateModal.style.display = "none";
+            affiliateIframe.src = "";
+        }
+
         span.onclick = function() {
             modal.style.display = "none";
         }
@@ -138,6 +157,9 @@
             }
             if (event.target == planModal) {
                 planModal.style.display = "none";
+            }
+            if (event.target == affiliateModal) {
+                closeAffiliateModal();
             }
         }
     </script>
