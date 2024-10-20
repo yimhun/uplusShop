@@ -120,6 +120,16 @@
         .price-details {
             margin-bottom: 15px;
         }
+        .price-details p {
+            margin: 5px 0;
+        }
+        .price-details p:first-child {
+            font-weight: bold;
+        }
+        .discount-item {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
         .button-group {
             display: flex;
             justify-content: space-between;
@@ -193,7 +203,7 @@
                     <li><a href="#home">홈</a></li>
                     <li><a href="#products">제품</a></li>
                     <li><a href="#" onclick="openAffiliateModal(); return false;">제휴카드 소개</a></li>
-                    <li><a href="#" onclick="openPlanModal()">요금제 안내</a></li>
+                    <li><a href="#" onclick="openPlanModal(); return false;">요금제 안내</a></li>
                     <li><a href="tel:1544-8999">고객센터</a></li>
                 </ul>
             </nav>
@@ -221,9 +231,9 @@
                     <p>애플의 최신 기술이 집약된 프리미엄 스마트폰</p>
                     <div class="price-details">
                         <p>출고가: 1,243,000원</p>
-                        <p>(-) 선택약정 할인: - 510,000원</p>
-                        <p>(-) 제휴카드 할인: - 360,000원</p>
-                        <p>(-) 법인특판 할인: - 300,000원</p>
+                        <p class="discount-item">(-) 선택약정 할인: - 510,000원</p>
+                        <p class="discount-item">(-) 제휴카드 할인: - 360,000원</p>
+                        <p class="discount-item">(-) 법인특판 할인: - 300,000원</p>
                     </div>
                     <div class="button-group">
                         <button onclick="openModal('iphone15')">자세히 보기</button>
@@ -236,9 +246,9 @@
                     <p>혁신적인 성능과 디자인의 차세대 아이폰</p>
                     <div class="price-details">
                         <p>출고가: 1,397,000원</p>
-                        <p>(-) 선택약정 할인: - 510,000원</p>
-                        <p>(-) 제휴카드 할인: - 360,000원</p>
-                        <p>(-) 법인특판 할인: - 300,000원</p>
+                        <p class="discount-item">(-) 선택약정 할인: - 510,000원</p>
+                        <p class="discount-item">(-) 제휴카드 할인: - 360,000원</p>
+                        <p class="discount-item">(-) 법인특판 할인: - 300,000원</p>
                     </div>
                     <div class="button-group">
                         <button onclick="openModal('iphone16')">자세히 보기</button>
@@ -251,9 +261,9 @@
                     <p>삼성의 최신 플래그십 스마트폰</p>
                     <div class="price-details">
                         <p>출고가: 1,155,000원</p>
-                        <p>(-) 선택약정 할인: - 510,000원</p>
-                        <p>(-) 제휴카드 할인: - 360,000원</p>
-                        <p>(-) 법인특판 할인: - 300,000원</p>
+                        <p class="discount-item">(-) 선택약정 할인: - 510,000원</p>
+                        <p class="discount-item">(-) 제휴카드 할인: - 360,000원</p>
+                        <p class="discount-item">(-) 법인특판 할인: - 300,000원</p>
                     </div>
                     <div class="button-group">
                         <button onclick="openModal('galaxys24')">자세히 보기</button>
@@ -266,9 +276,9 @@
                     <p>혁신적인 폴더블 디자인의 컴팩트 스마트폰</p>
                     <div class="price-details">
                         <p>출고가: 1,485,000원</p>
-                        <p>(-) 선택약정 할인: - 510,000원</p>
-                        <p>(-) 제휴카드 할인: - 360,000원</p>
-                        <p>(-) 법인특판 할인: - 300,000원</p>
+                        <p class="discount-item">(-) 선택약정 할인: - 510,000원</p>
+                        <p class="discount-item">(-) 제휴카드 할인: - 360,000원</p>
+                        <p class="discount-item">(-) 법인특판 할인: - 300,000원</p>
                     </div>
                     <div class="button-group">
                         <button onclick="openModal('galaxyzflip6')">자세히 보기</button>
@@ -281,9 +291,9 @@
                     <p>대화면 폴더블 스마트폰의 최신작</p>
                     <div class="price-details">
                         <p>출고가: 2,229,700원</p>
-                        <p>(-) 선택약정 할인: - 510,000원</p>
-                        <p>(-) 제휴카드 할인: - 360,000원</p>
-                        <p>(-) 법인특판 할인: - 300,000원</p>
+                        <p class="discount-item">(-) 선택약정 할인: - 510,000원</p>
+                        <p class="discount-item">(-) 제휴카드 할인: - 360,000원</p>
+                        <p class="discount-item">(-) 법인특판 할인: - 300,000원</p>
                     </div>
                     <div class="button-group">
                         <button onclick="openModal('galaxyzfold6')">자세히 보기</button>
@@ -296,24 +306,11 @@
 
     <div id="modal" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
+            <span class="close" onclick="closeModal()">&times;</span>
             <img id="modal-image" src="" alt="상세 이미지">
         </div>
     </div>
 
     <div id="plan-modal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closePlanModal()">&times;</span>
-            <img src="요금제.jpg" alt="요금제 안내" style="width:100%;">
-        </div>
-    </div>
-
-    <div id="affiliate-modal" class="modal">
-        <div class="modal-content" style="width: 90%; max-width: 1200px; height: 80vh;">
-            <span class="close" onclick="closeAffiliateModal()">&times;</span>
-            <iframe id="affiliate-iframe" style="width: 100%; height: 100%; border: none;" src=""></iframe>
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 LG U+ 법인 특가폰 Mall. All rights reserve
+            <span class="
