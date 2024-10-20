@@ -1,3 +1,4 @@
+/* 기존 스타일 */
 :root {
     --primary-color: #700fa0;
     --secondary-color: #f2f2f2;
@@ -69,81 +70,6 @@ main {
     margin-top: 30px;
 }
 
-.product-card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.product-card:hover {
-    transform: translateY(-5px);
-}
-
-.product-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
-
-.product-card h3 {
-    font-size: 1.2rem;
-    color: var(--primary-color);
-    margin-bottom: 10px;
-}
-
-.product-card p {
-    margin: 5px 0;
-}
-
-.product-card .price {
-    font-weight: bold;
-    color: var(--accent-color);
-    margin: 10px 0;
-}
-
-.button-group {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
-}
-
-.button-group button,
-.button-group .consult-button {
-    flex: 1;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-    text-align: center;
-    font-size: 14px;
-}
-
-.button-group button {
-    background-color: var(--primary-color);
-    color: #fff;
-    margin-right: 5px;
-}
-
-.button-group .consult-button {
-    background-color: var(--accent-color);
-    color: #fff;
-    margin-left: 5px;
-}
-
-.button-group button:hover {
-    background-color: #560c7e;
-}
-
-.button-group .consult-button:hover {
-    background-color: #e62e7f;
-}
-
 footer {
     background-color: var(--primary-color);
     color: #fff;
@@ -191,4 +117,63 @@ footer {
 #modal-image {
     width: 100%;
     height: auto;
+}
+
+/* 새로운 제품 카드 스타일 */
+.product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: left;
+}
+
+.product-name {
+    color: #9254de;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.product-description {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.price-details {
+    margin-bottom: 15px;
+}
+
+.original-price {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.discount-item {
+    color: #ff3e96;
+    margin: 5px 0;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail-button, .consult-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    flex-grow: 1;
+    margin: 0 5px;
+}
+
+.detail-button {
+    background-color: #9254de;
+}
+
+.consult-button {
+    background-color: #ff3e96;
 }
