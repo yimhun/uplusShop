@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'LGSmHaR';
+    src: url('font/LGSmHaR.woff2') format('woff2'),
+         url('font/LGSmHaR.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
     --primary-color: #700fa0;
     --secondary-color: #f2f2f2;
@@ -6,7 +14,7 @@
 }
 
 body {
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'LGSmHaR', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -115,6 +123,10 @@ main {
     font-size: 0.9em;
 }
 
+.discount-item:last-child {
+    font-weight: bold;
+}
+
 .button-group {
     display: flex;
     justify-content: space-between;
@@ -130,7 +142,10 @@ main {
     cursor: pointer;
     flex-grow: 1;
     margin: 0 5px;
-    font-size: 0.9em;
+    font-size: 0.8em; /* 폰트 크기 줄임 */
+    white-space: nowrap; /* 줄바꿈 방지 */
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .detail-button {
@@ -204,10 +219,11 @@ footer {
     }
 
     .button-group {
-        flex-direction: column;
+        flex-direction: row; /* 버튼을 가로로 배치 */
     }
 
     .detail-button, .consult-button {
-        margin: 5px 0;
+        padding: 8px 12px; /* 패딩 조정 */
+        font-size: 0.7em; /* 모바일에서 폰트 크기 더 줄임 */
     }
 }
