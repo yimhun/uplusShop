@@ -3,186 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LG U+ 법인 특가폰 Mall</title>
+    <title>이미지 랜딩페이지</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div>
-        <header class="header-content">
-            <div class="logo">
-                LG U+ 법인 특가폰 Mall
+    <div class="container">
+        <h1>이미지 갤러리</h1>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="image1.jpg" alt="이미지 1">
+                <a href="image1.jpg" download="image1.jpg"><button>다운로드</button></a>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#home">홈</a></li>
-                    <li><a href="#products">제품</a></li>
-                    <li><a href="#" onclick="openAffiliateModal(); return false;">제휴카드 소개</a></li>
-                    <li><a href="#" onclick="openPlanModal(); return false;">요금제 안내</a></li>
-                    <li><a href="tel:1544-8999">고객센터</a></li>
-                </ul>
-            </nav>
-        </header>
-    </div>
-
-
-
-    <main role="main">
-        <section class="section info-section">
-            <h2>LG U+ 기업 통신 고객사 대상 최신폰 특판mall 입니다.</h2>
-            <p>통신사에서 제공하는 약정할인, 결합할인 외에 법인 특판 대리점의 추가 지원 혜택을 제공합니다.</p>
-        </section>
-
-        <section id="products" class="section">
-            <h2>제품 목록</h2>
-            <div class="product-grid">
-                <!-- 아이폰15 -->
-                <div class="product-card">
-                    <img src="image/iphone15-thumbnail.jpg" alt="아이폰15">
-                    <h3 class="product-name">아이폰15</h3>
-                    <p>애플의 최신 기술이 집약된 프리미엄 스마트폰</p>
-                    <div class="price-details">
-                        <p>출고가: 1,243,000원</p>
-                        <p>(-) 선택약정 할인: - 510,000원</p>
-                        <p>(-) 제휴카드 할인: - 360,000원</p>
-                        <p>(-) 법인특판 할인: - 340,000원</p>
-                    </div>
-                    <div class="button-group">
-                        <button onclick="showProductDetails('iphone15')" class="detail-button">자세히 보기</button>
-                        <a href="https://forms.gle/1GkMNer2tGjpyYQJ6" class="consult-button" target="_blank">상담 신청하기</a>
-                    </div>
-                </div>
-
-                <!-- 아이폰16 -->
-                <div class="product-card">
-                    <img src="image/iphone16-thumbnail.jpg" alt="아이폰16">
-                    <h3 class="product-name">아이폰16</h3>
-                    <p>혁신적인 성능과 디자인의 차세대 아이폰</p>
-                    <div class="price-details">
-                        <p>출고가: 1,397,000원</p>
-                        <p>(-) 선택약정 할인: - 510,000원</p>
-                        <p>(-) 제휴카드 할인: - 360,000원</p>
-                        <p>(-) 법인특판 할인: - 340,000원</p>
-                    </div>
-                    <div class="button-group">
-                        <button onclick="showProductDetails('iphone16')" class="detail-button">자세히 보기</button>
-                        <a href="https://forms.gle/1GkMNer2tGjpyYQJ6" class="consult-button" target="_blank">상담 신청하기</a>
-                    </div>
-                </div>
-
-                <!-- 갤럭시S24 -->
-                <div class="product-card">
-                    <img src="image/galaxys24-thumbnail.jpg" alt="갤럭시S24">
-                    <h3 class="product-name">갤럭시S24</h3>
-                    <p>삼성의 최신 플래그십 스마트폰</p>
-                    <div class="price-details">
-                        <p>출고가: 1,155,000원</p>
-                        <p>(-) 선택약정 할인: - 510,000원</p>
-                        <p>(-) 제휴카드 할인: - 360,000원</p>
-                        <p>(-) 법인특판 할인: - 340,000원</p>
-                    </div>
-                    <div class="button-group">
-                        <button onclick="showProductDetails('galaxys24')" class="detail-button">자세히 보기</button>
-                        <a href="https://forms.gle/1GkMNer2tGjpyYQJ6" class="consult-button" target="_blank">상담 신청하기</a>
-                    </div>
-                </div>
-
-                <!-- 갤럭시Z Flip6 -->
-                <div class="product-card">
-                    <img src="image/galaxyzflip6-thumbnail.jpg" alt="갤럭시Z Flip6">
-                    <h3 class="product-name">갤럭시Z Flip6</h3>
-                    <p>혁신적인 폴더블 디자인의 컴팩트 스마트폰</p>
-                    <div class="price-details">
-                        <p>출고가: 1,485,000원</p>
-                        <p>(-) 선택약정 할인: - 510,000원</p>
-                        <p>(-) 제휴카드 할인: - 360,000원</p>
-                        <p>(-) 법인특판 할인: - 340,000원</p>
-                    </div>
-                    <div class="button-group">
-                        <button onclick="showProductDetails('galaxyzflip6')" class="detail-button">자세히 보기</button>
-                        <a href="https://forms.gle/1GkMNer2tGjpyYQJ6" class="consult-button" target="_blank">상담 신청하기</a>
-                    </div>
-                </div>
-
-                <!-- 갤럭시Z Fold6 -->
-                <div class="product-card">
-                    <img src="image/galaxyzfold6-thumbnail.jpg" alt="갤럭시Z Fold6">
-                    <h3 class="product-name">갤럭시Z Fold6</h3>
-                    <p>대화면 폴더블 스마트폰의 최신작</p>
-                    <div class="price-details">
-                        <p>출고가: 2,229,700원</p>
-                        <p>(-) 선택약정 할인: - 510,000원</p>
-                        <p>(-) 제휴카드 할인: - 360,000원</p>
-                        <p>(-) 법인특판 할인: - 340,000원</p>
-                    </div>
-                    <div class="button-group">
-                        <button onclick="showProductDetails('galaxyzfold6')" class="detail-button">자세히 보기</button>
-                        <a href="https://forms.gle/1GkMNer2tGjpyYQJ6" class="consult-button" target="_blank">상담 신청하기</a>
-                    </div>
-                </div>
+            <div class="gallery-item">
+                <img src="image2.jpg" alt="이미지 2">
+                <a href="image2.jpg" download="image2.jpg"><button>다운로드</button></a>
             </div>
-        </section>
-    </main>
-
-    <!-- 상품 상세 모달 -->
-    <div id="productModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('productModal')">&times;</span>
-            <img id="modal-image" src="" alt="상세 이미지">
+            <div class="gallery-item">
+                <img src="image3.jpg" alt="이미지 3">
+                <a href="image3.jpg" download="image3.jpg"><button>다운로드</button></a>
+            </div>
+            <div class="gallery-item">
+                <img src="image4.jpg" alt="이미지 4">
+                <a href="image4.jpg" download="image4.jpg"><button>다운로드</button></a>
+            </div>
+            <div class="gallery-item">
+                <img src="image5.jpg" alt="이미지 5">
+                <a href="image5.jpg" download="image5.jpg"><button>다운로드</button></a>
+            </div>
+            <div class="gallery-item">
+                <img src="image6.jpg" alt="이미지 6">
+                <a href="image6.jpg" download="image6.jpg"><button>다운로드</button></a>
+            </div>
+            <div class="gallery-item">
+                <img src="image7.jpg" alt="이미지 7">
+                <a href="image7.jpg" download="image7.jpg"><button>다운로드</button></a>
+            </div>
         </div>
     </div>
-
-    <!-- 제휴카드 소개 모달 -->
-    <div id="affiliateModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('affiliateModal')">&times;</span>
-            <iframe id="affiliateFrame" src="" style="width:100%;height:80vh;border:none;"></iframe>
-        </div>
-    </div>
-
-    <!-- 요금제 안내 모달 -->
-    <div id="planModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('planModal')">&times;</span>
-            <img src="요금제.jpg" alt="요금제 안내" style="width:100%;">
-        </div>
-    </div>
-
-    <script>
-        function showProductDetails(productName) {
-            var modal = document.getElementById("productModal");
-            var img = document.getElementById("modal-image");
-            img.src = "image/" + productName + "-detail.jpg";
-            modal.style.display = "block";
-        }
-
-        function openAffiliateModal() {
-            var modal = document.getElementById("affiliateModal");
-            var iframe = document.getElementById("affiliateFrame");
-            iframe.src = "https://www.lguplus.com/benefit-affiliate/card-discount";
-            modal.style.display = "block";
-        }
-
-        function openPlanModal() {
-            var modal = document.getElementById("planModal");
-            modal.style.display = "block";
-        }
-
-        function closeModal(modalId) {
-            var modal = document.getElementById(modalId);
-            modal.style.display = "none";
-            if (modalId === "affiliateModal") {
-                document.getElementById("affiliateFrame").src = "";
-            }
-        }
-
-        window.onclick = function(event) {
-            if (event.target.className === "modal") {
-                event.target.style.display = "none";
-                if (event.target.id === "affiliateModal") {
-                    document.getElementById("affiliateFrame").src = "";
-                }
-            }
-        }
-    </script>
 </body>
 </html>
